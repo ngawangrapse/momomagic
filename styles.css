@@ -1,0 +1,166 @@
+/* General Styles */
+body {
+font-family: "Cormorant Garamond", serif;
+    margin: 0;
+    line-height: 1.6;
+font-size: 1.1rem;
+
+    color: #333;
+    background-color: #fff8f0;
+    overflow: hidden; /* scroll handled by wrapper */
+}
+
+/* Header with background image */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: url('momoh.jpg') center/cover no-repeat;
+    backdrop-filter: brightness(0.75);
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+font-size: 1.3rem;
+    font-weight: bold;
+
+font-family: "Cormorant Garamond", serif;
+
+    padding: 1rem 1rem;
+}
+
+/* Logo with light semi-transparent background */
+.logo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+font-family: "Cormorant Garamond", serif;
+	padding: 5px 10px;
+    border-radius: 5px;
+}
+
+/* Menu with light semi-transparent background */
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: background 0.3s;
+    padding: 5px 12px;
+    border-radius: 5px;
+}
+
+.menu li a:hover {
+    background-color:  #ffe6cc; /* highlight on hover */
+}
+
+/* Scrollable content wrapper */
+.content-wrapper {
+    margin-top: 100px; /* space for fixed header */
+    height: calc(100vh - 50px); /* subtract footer height */
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    scrollbar-color: #ffcc66 #f0e6d6;
+}
+
+.content-wrapper::-webkit-scrollbar {
+    width: 6px;
+}
+
+.content-wrapper::-webkit-scrollbar-track {
+    background: #f0e6d6;
+}
+
+.content-wrapper::-webkit-scrollbar-thumb {
+    background-color: #ffcc66;
+    border-radius: 3px;
+}
+
+/* Section Styles */
+.section {
+    padding: 60px 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.section h2 {
+    color: #ffcc66;
+    margin-bottom: 10px;
+}
+
+.section h1 {
+    color: #333;
+font-family: "Cormorant Garamond", serif;
+    margin-bottom: 10px;
+}
+
+.section img.section-img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+/* Home button */
+.download-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #F5DEB3;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.3s;
+    float: right;
+color: #333;
+    margin-top: -10px;
+    margin-bottom: 20px;
+}
+
+.download-btn:hover {
+    background-color: #FFF8DC;
+}
+
+/* Video Container */
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Footer */
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 30px;
+    text-align: center;
+    background-color: #ffe6cc;
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+    font-size: 12px; /* adjust the number to make it smaller or bigger */
+}
+
+/* Smooth Scroll */
+html {
+    scroll-behavior: smooth;
+}
